@@ -47,7 +47,7 @@ module ElasticAPM
 
         def pop_event(event)
           span = @events[event.operation_id]
-          span.done
+          span && span.done
         end
       end
     end
